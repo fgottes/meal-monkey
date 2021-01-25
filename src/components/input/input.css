@@ -1,0 +1,13 @@
+.inputbox {
+  color: black;
+  font-size: 1.5em;
+  text-align: left;
+  size: 20pt;
+  padding: 18px 224px 19px 34px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  border: none;
+}
+::placeholder {
+  color: #b6b7b7;
+}
