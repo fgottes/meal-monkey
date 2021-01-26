@@ -1,5 +1,6 @@
 import "./input.css";
-import inputbox from "./input.html";
+import inputemail from "./input-email.html";
+import inputpassword from "./input-password.html";
 
 
 export default {
@@ -8,4 +9,5 @@ export default {
 };
 
 
-export const border = () => inputbox;
+export const inputmail = () => inputemail;
+export const inputpw = () => inputpassword;
