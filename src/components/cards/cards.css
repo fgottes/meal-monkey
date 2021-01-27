@@ -1,0 +1,11 @@
+.img-fluid {
+  border-radius: 20%;
+  height: 12vw;
+  width: 12vw;
+  border: 1px solid;
+}
+
+.heading {
+  font-weight: bold;
+  text-align: center;
+}
