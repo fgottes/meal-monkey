@@ -1,11 +1,21 @@
-.img-fluid {
-  border-radius: 20%;
-  height: 12vw;
-  width: 12vw;
-  border: 1px solid;
+.card {
+  display: flex;
+  flex-direction: column;
 }
 
-.heading {
-  font-weight: bold;
+.card-image {
+  border-radius: 20%;
+  width: 8vw;
+  object-fit: cover;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 90vw;
+}
+
+.card-text {
   text-align: center;
+  font-size: 100%;
 }
