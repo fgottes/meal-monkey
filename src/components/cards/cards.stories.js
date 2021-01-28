@@ -14,3 +14,4 @@ export const african = () => cardAfrican;
 export const american = () => cardAmerican;
 export const spanish = () => cardSpanish;
 export const multiple = () => cardContainer;
+multiple.parameters={layout:"fullscreen"};
