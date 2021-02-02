@@ -14,8 +14,6 @@ export function createRegisterForm() {
   const title = document.createElement("h2");
   title.innerText = "Reset Password";
 
-  // document.write("Please enter you email to receive a link to create a new passwort via email.");
-
   const text = document.createElement("p");
   text.innerText =
     "Please enter your email to receive a link to create a new password via email";
