@@ -1,10 +1,9 @@
 import "./form.css";
-import { createRegisterForm } from "./restiger-form";
+import { createRegisterForm } from "./register-form";
 
 export default {
-    title: "Components/Form",
-    parameters: { layout: "centered" },
-
+  title: "Components/Form",
+  parameters: { layout: "centered" },
 };
 
-export const register = () => createRegisterForm ();
+export const register = () => createRegisterForm();

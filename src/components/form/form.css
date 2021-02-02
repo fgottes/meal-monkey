@@ -1,2 +1,46 @@
-.from {
+.button {
+  border-radius: 28px;
+  font-size: 16px;
+  color: white;
+  background: #a467dd;
+  border: none;
+  padding: 10px 40px;
+  line-height: 19px;
+}
+.button:focus {
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 1px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.459) inset;
+}
+.button:-webkit-autofill {
+  border: hidden;
+}
+
+.inputemail {
+  border-radius: 28px;
+  font-size: 14px;
+  line-height: 19px;
+  color: black;
+  background: #f2f2f2;
+  border: none;
+  padding: 17px 34px;
+  min-width: 250px;
+}
+.inputemail:focus {
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 1px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.459) inset;
+}
+.input:-webkit-autofill {
+  border: hidden;
+}
+
+.form {
+  display: grid;
+  grid-row-gap: 1em;
+  text-align: center;
+}
+
+.form .input {
+  margin-top: 2em;
 }
