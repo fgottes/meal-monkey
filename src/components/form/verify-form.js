@@ -1,53 +1,68 @@
-function createOTPInputElement() {
-  const input = document.createElement("input");
-  input.type = "password";
-  input.placeholder = "*";
-  input.className = "input";
+import { createElement } from "../../utils/createElement.js";
 
-  return input;
+function createInputPassword() {
+  return createElement("input", {
+    className: "input",
+    placeholder: "*",
+    type: "number",
+    maxLength: 1,
+    min: 0,
+    max: 9,
+  });
 }
-
-function createPasswordContainerElement() {
-  const passwordContainer = document.createElement("div");
-  passwordContainer.className = "form__otp";
-
-  const otpOne = createOTPInputElement();
-  const otpTwo = createOTPInputElement();
-  const otpThree = createOTPInputElement();
-  const otpFour = createOTPInputElement();
-
-  passwordContainer.append(otpOne, otpTwo, otpThree, otpFour);
-
-  return passwordContainer;
-}
-
 export function createVerifyForm() {
-  const form = document.createElement("form");
-  form.className = "form";
+  const pass1 = createInputPassword();
+  const pass2 = createInputPassword();
+  const pass3 = createInputPassword();
+  const pass4 = createInputPassword();
 
-  const title = document.createElement("h2");
-  title.innerText = "We have sent an OTP to your Mobile";
+  const messageElement = createElement("p", {
+    className: "message",
+  });
 
-  const text = document.createElement("p");
-  text.innerText =
-    "Please check your mobile number 071*****12 continue to reset your password";
+  return createElement("form", {
+    className: "form",
+    children: [
+      createElement("h2", {
+        innerText: "We just send an OTP to your Mobile!",
+      }),
 
-  const passwordContainer = createPasswordContainerElement();
+      createElement("p", {
+        innerText: "Please check your inbox (0174*****48)",
+      }),
+      messageElement,
+      createElement("div", {
+        className: "form__otp",
+        children: [pass1, pass2, pass3, pass4],
+      }),
 
-  const button = document.createElement("button");
-  button.innerText = "Next";
-  button.className = "btn";
+      createElement("input", {
+        type: "submit",
+        value: "Enter",
+        className: "btn",
+      }),
 
-  const hint = document.createElement("p");
-  hint.innerText = "Didn't Receive?";
-  hint.className = "form__hint";
+      createElement("p", {
+        innerText: "Din't receive?",
+        className: "form__hint",
+        children: [
+          createElement("a", {
+            innerText: "Click here",
+            href: "#",
+          }),
+        ],
+      }),
+    ],
+    onsubmit: function (event) {
+      event.preventDefault();
 
-  const resendLink = document.createElement("a");
-  resendLink.innerText = "Click Here";
-  resendLink.href = "#";
+      const password = `${pass1.value}${pass2.value}${pass3.value}${pass4.value}`;
 
-  hint.append(resendLink);
-
-  form.append(title, text, passwordContainer, button, hint);
-  return form;
+      if (password === "2707") {
+        messageElement.innerText = "Welcome User !";
+      } else {
+        messageElement.innerText = "GTFO of here...";
+      }
+    },
+  });
 }
