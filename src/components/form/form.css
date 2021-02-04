@@ -36,11 +36,11 @@
   border-radius: 10px;
 }
 
-a,
-a:visited,
-a:active,
-a:hover {
+.message {
+  height: 1.5em;
   color: #7099f1;
+  line-height: 1.5em;
+}
+::placeholder {
   font-weight: bold;
-  text-decoration: none;
 }
